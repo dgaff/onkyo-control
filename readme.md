@@ -63,9 +63,7 @@ Armed with this I opened a serial connection (9600, n, 8, 1) to the Onkyo and tu
 
 Next I wanted to write some code to see how easy it was to control a serial port. To further prototype, I bought a 4x4 [Neo Trellis](https://www.adafruit.com/product/4352) kit from AdaFruit. (Video credit: AdaFruit)
 
-<video preload="auto" muted loop playsinline width="512" height="384">
-<source src="images/4352-08.mp4" type="video/mp4" />
-</video>
+https://github.com/dgaff/onkyo-control/assets/1971008/3cd47e9a-a3f0-40fe-beb7-f7f1422db4b6
 
 This keypad combined with an M4 board and a [TTL-to-RS232 line driver](https://www.amazon.com/gp/product/B00LPK0Z9A/) gave me enough to write some code.
 
@@ -143,9 +141,7 @@ Unsurprisingly, there's a small [dev board](https://www.adafruit.com/product/137
 
 My experience with prox sensors if that they work best in devices that are grounded. Since this keypad ultimately connects to ground at the USB power supply and ground on the receiver, it ended up working pretty well. In the code, I have all of the keys light up when proxy is triggered, and then they fade out if you don't select anything. The LEDs aren't as bright as this bad iPhone video shows, but you get the idea.
 
-<video preload="auto" muted loop playsinline width="360" height="640">
-<source src="images/IMG_8057.mp4" type="video/mp4" />
-</video>
+https://github.com/dgaff/onkyo-control/assets/1971008/f3d951bb-dab9-4129-bd3d-392d38261f8a
 
 ### Other possible ways to design this
 
