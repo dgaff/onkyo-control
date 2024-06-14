@@ -185,6 +185,8 @@ while True:
         # Otherwise this is a prox fade-out, fade out all buttons except selected one.
         else:
             for i in range(12): 
+                # NOTE: Originally when the system was off and the prox was triggered, I would just fade all the
+                # LEDs at the same time. I added some code below to fade the off button separately in this case.
                 # if last_button_id == 11 or i != last_button_id:
                 if i != last_button_id:
                     leds.set_channel(i, led_fade_level)
@@ -192,11 +194,13 @@ while True:
 
         # Are we done fading?
         if led_fade_level == 0:
+            # If the system is already off, this will cause the Off button to fade out on its own next.
             if last_button_id == 11 and prox_fadeout:
                 power_off_fadeout = True
                 led_fade_timer_ns = time.monotonic_ns() + 1000000000 
                 led_fade_level = dim_levels[dim_index]
                 prox_fadeout = False
+            # Otherwise, reset the fadeout flags and timer.
             else:
                 power_off_fadeout = False            
                 prox_fadeout = False            
