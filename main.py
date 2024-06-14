@@ -168,6 +168,7 @@ while True:
         led_fade_timer_ns = time.monotonic_ns() + 3000000000  
         led_fade_level = dim_levels[dim_index]
         prox_fadeout = True
+        power_off_fadeout = False
 
         # All lights on.    
         for i in range(12): leds.set_channel(i, dim_levels[dim_index]) 
