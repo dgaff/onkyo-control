@@ -185,15 +185,22 @@ while True:
         # Otherwise this is a prox fade-out, fade out all buttons except selected one.
         else:
             for i in range(12): 
-                if last_button_id == 11 or i != last_button_id:
+                # if last_button_id == 11 or i != last_button_id:
+                if i != last_button_id:
                     leds.set_channel(i, led_fade_level)
         leds.show()
 
         # Are we done fading?
         if led_fade_level == 0:
-            power_off_fadeout = False
-            prox_fadeout = False
-            led_fade_timer_ns = 0
+            if last_button_id == 11 and prox_fadeout:
+                power_off_fadeout = True
+                led_fade_timer_ns = time.monotonic_ns() + 1000000000 
+                led_fade_level = dim_levels[dim_index]
+                prox_fadeout = False
+            else:
+                power_off_fadeout = False            
+                prox_fadeout = False            
+                led_fade_timer_ns = 0
         else:
             led_fade_timer_ns = time.monotonic_ns() + 15000000  # 15 ms fade interval
 
