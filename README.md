@@ -1,5 +1,7 @@
 # Onkyo Wired Remote
 
+<a href="https://www.buymeacoffee.com/douggaff" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ## Intro
 
 I have fun stereo setup in my living room. It's a nice mix of old and new technology. My 7.1 AV receiver is an Onkyo TX-RZ800, which even at 10+ years old is still an awesome and powerful system. Recently my son starting getting into audio cassettes thanks to the Magnus Archive, and I brought up a 1980s vintage tape deck I fixed a couple year ago. I already had a couple of devices in the audio stack, and so I decided it was time to build a proper audio stack.
